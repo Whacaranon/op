@@ -9,7 +9,7 @@ if not game:IsLoaded() then
 	GameLoadGui.Text = 'Wait Game Loading';
 	game.Loaded:Wait();
 	GameLoadGui:Destroy();
-	task.wait(10);
+	task.wait(1);
 end;
 
 _G.Settings = {
@@ -865,7 +865,6 @@ function Click()
 end
 
 -- [Server Hop Api]
-
 
 -- [Remove Text Fruits]
 
@@ -10964,7 +10963,6 @@ end)
 
 --
 
-getgenv().ESP = loadstring(game:HttpGet("https://raw.githubusercontent.com/ErenYeaker/SaveScript/main/ESP.lua"))();
 
 Page15.Toggle({
 	Title = "ESP",
