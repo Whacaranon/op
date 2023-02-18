@@ -12,6 +12,25 @@ if not game:IsLoaded() then
 	task.wait(1);
 end;
 
+local ScreenGui = Instance.new("ScreenGui")
+local ImageButton = Instance.new("ImageButton")
+
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+ImageButton.Parent = ScreenGui
+ImageButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+ImageButton.BorderSizePixel = 0
+ImageButton.Position = UDim2.new(0.120833337, 0, 0.0952890813, 0)
+ImageButton.Size = UDim2.new(0, 45, 0, 45)
+ImageButton.Draggable = true
+ImageButton.Image = "http://www.roblox.com/asset/?id=7637477170"
+ImageButton.MouseButton1Down:connect(function()
+game:GetService("VirtualInputManager"):SendKeyEvent(true,305,false,game)
+ game:GetService("VirtualInputManager"):SendKeyEvent(false,305,false,game)
+end)
+
 _G.Settings = {
 
 	Main = {
@@ -2204,7 +2223,7 @@ function CheckQuest()
 
 			CFrameQuest = CFrame.new(151, 23, -12774)
 			VectorQuest = Vector3.new(151, 23, -12774)
-		elseif MyLevel >= 2375 then
+		elseif MyLevel == 2375 or MyLevel <= 2399 then
 			LevelFarm = 30
 
 			Name = "Candy Rebel [Lv. 2375]"
@@ -2218,6 +2237,34 @@ function CheckQuest()
 
 			CFrameQuest = CFrame.new(151, 23, -12774)
 			VectorQuest = Vector3.new(151, 23, -12774)
+	elseif MyLevel == 2400 or MyLevel <= 2425 then
+		    LevelFarm = 31
+		    
+		    Name = "Candy Pirate [Lv. 2400]"
+		    QuestName = "CandyQuest1"
+		    
+		    LevelQuest = 1
+			NameMon = "Candy Pirate"
+		    
+		    CFrameMon = CFrame.new(-1408.46521, 16.1423531, -14552.2041, 0.90175873, -8.17216943e-08, -0.432239741, 7.81264475e-08, 1, -2.60746162e-08, 0.432239741, -1.02563433e-08, 0.90175873)
+		    VectorQuest = Vector3.new(-1408.46521, 16.1423531, -14552.2041, 0.90175873, -8.17216943e-08, -0.432239741, 7.81264475e-08, 1, -2.60746162e-08, 0.432239741, -1.02563433e-08, 0.90175873)
+		    
+		    CFrameQuest = CFrame.new(-1151.48987, 16.1422901, -14445.6904, -0.316594511, -6.85698254e-08, -0.948560953, -2.05343067e-08, 1, -6.54346692e-08, 0.948560953, -1.23821675e-09, -0.316594511)
+		    VectorQuest = Vector3.new(-1151.48987, 16.1422901, -14445.6904, -0.316594511, -6.85698254e-08, -0.948560953, -2.05343067e-08, 1, -6.54346692e-08, 0.948560953, -1.23821675e-09, -0.316594511)
+	   elseif MyLevel >= 2425 then
+		    LevelFarm = 32
+		    
+		    Name = "Snow Demon [Lv. 2425]"
+		    QuestName = "CandyQuest1"
+		    
+		    LevelQuest = 2
+			NameMon = "Snow Demon"
+		    
+		    CFrameMon = CFrame.new(-777.070862, 23.5809536, -14453.0078, 0.33384338, 0, -0.942628562, 0, 1, 0, 0.942628562, 0, 0.33384338)
+		    VectorQuest = Vector3.new(-777.070862, 23.5809536, -14453.0078, 0.33384338, 0, -0.942628562, 0, 1, 0, 0.942628562, 0, 0.33384338)
+		    
+		    CFrameQuest = CFrame.new(-1151.48987, 16.1422901, -14445.6904, -0.316594511, -6.85698254e-08, -0.948560953, -2.05343067e-08, 1, -6.54346692e-08, 0.948560953, -1.23821675e-09, -0.316594511)
+		    VectorQuest = Vector3.new(-1151.48987, 16.1422901, -14445.6904, -0.316594511, -6.85698254e-08, -0.948560953, -2.05343067e-08, 1, -6.54346692e-08, 0.948560953, -1.23821675e-09, -0.316594511)
 		end
 	end
 end
@@ -3156,6 +3203,30 @@ function CheckOldQuest(LevelFarm)
 
 			CFrameQuest = CFrame.new(151, 23, -12774)
 			VectorQuest = Vector3.new(151, 23, -12774)
+			elseif LevelFarm == 31 then				
+			Name = "Candy Pirate [Lv. 2400]"
+		    QuestName = "CandyQuest1"
+		    
+		    LevelQuest = 1
+			NameMon = "Candy Pirate"
+		    
+		    CFrameMon = CFrame.new(-1408.46521, 16.1423531, -14552.2041, 0.90175873, -8.17216943e-08, -0.432239741, 7.81264475e-08, 1, -2.60746162e-08, 0.432239741, -1.02563433e-08, 0.90175873)
+		    VectorQuest = Vector3.new(-1408.46521, 16.1423531, -14552.2041, 0.90175873, -8.17216943e-08, -0.432239741, 7.81264475e-08, 1, -2.60746162e-08, 0.432239741, -1.02563433e-08, 0.90175873)
+		    
+		    CFrameQuest = CFrame.new(-1151.48987, 16.1422901, -14445.6904, -0.316594511, -6.85698254e-08, -0.948560953, -2.05343067e-08, 1, -6.54346692e-08, 0.948560953, -1.23821675e-09, -0.316594511)
+		    VectorQuest = Vector3.new(-1151.48987, 16.1422901, -14445.6904, -0.316594511, -6.85698254e-08, -0.948560953, -2.05343067e-08, 1, -6.54346692e-08, 0.948560953, -1.23821675e-09, -0.316594511)
+			elseif LevelFarm == 32 then
+	     Name = "Snow Demon [Lv. 2425]"
+		    QuestName = "CandyQuest1"
+		    
+		    LevelQuest = 2
+			NameMon = "Snow Demon"
+		    
+		    CFrameMon = CFrame.new(-777.070862, 23.5809536, -14453.0078, 0.33384338, 0, -0.942628562, 0, 1, 0, 0.942628562, 0, 0.33384338)
+		    VectorQuest = Vector3.new(-777.070862, 23.5809536, -14453.0078, 0.33384338, 0, -0.942628562, 0, 1, 0, 0.942628562, 0, 0.33384338)
+		    
+		    CFrameQuest = CFrame.new(-1151.48987, 16.1422901, -14445.6904, -0.316594511, -6.85698254e-08, -0.948560953, -2.05343067e-08, 1, -6.54346692e-08, 0.948560953, -1.23821675e-09, -0.316594511)
+		    VectorQuest = Vector3.new(-1151.48987, 16.1422901, -14445.6904, -0.316594511, -6.85698254e-08, -0.948560953, -2.05343067e-08, 1, -6.54346692e-08, 0.948560953, -1.23821675e-09, -0.316594511)
 		end
 	end
 end
